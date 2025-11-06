@@ -278,7 +278,7 @@
 
   <script src="config.js"></script>
 <script>
-  const API_URL = window.ENV.API_URL;
+  const WEATHER_URL = window.ENV.WEATHER_URL;
     const chatBox = document.getElementById("chatBox");
     const input = document.getElementById("userInput");
     const sendBtn = document.getElementById("sendBtn");
@@ -349,7 +349,7 @@
       showTyping();
 
       try {
-        const res = await fetch(`${API_URL}?q=${encodeURIComponent(userMsg)}`);
+        const res = await fetch(`${WEATHER_URL}?q=${encodeURIComponent(userMsg)}`);
         const data = await res.json();
 
         removeTyping();
